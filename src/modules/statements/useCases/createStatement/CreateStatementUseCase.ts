@@ -28,6 +28,8 @@ export class CreateStatementUseCase {
       if (balance < amount) {
         throw new CreateStatementError.InsufficientFunds()
       }
+    console.log(balance)
+
     }
 
     const statementOperation = await this.statementsRepository.create({
